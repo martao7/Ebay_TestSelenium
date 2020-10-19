@@ -38,6 +38,9 @@ public class EbayTest {
 
         //czekaj zanim rzucisz wyjatkiem
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+            
+        ChooseOptionsPage chooseOptionsPage = new ChooseOptionsPage(driver);
+        chooseOptionsPage.setOptionToChoose();
 
 
         //driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
