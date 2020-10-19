@@ -4,6 +4,6 @@ Feature: Ebay New order
 
     Given an open browser ebay.com
     When he search a product
-    And he chooses an option "buy it now", "condition: new" and "price shipping: lowers first"
+    And he chooses an option "buy it now", "condition: new" and "price shipping: lowest first"
     And he chooses one product
     Then this product is added to his order
