@@ -31,12 +31,13 @@ public class EbayStepdefs {
 
 
         //driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-
-        //driver.get("");
     }
 
-    @And("^he chooses an option \"([^\"]*)\", \"([^\"]*)\" and \"([^\"]*)\"$")
-    public void heChoosesAnOptionAnd(String arg0, String arg1, String arg2)  {
+    @And("^he chooses an option \"([^\"]*)\", \"([^\"]*)\"$")
+    public void heChoosesAnOptionAnd(String arg0, String arg1)  {
+        
+        ChooseOptionsPage chooseOptionsPage = new ChooseOptionsPage(driver);
+        chooseOptionsPage.setOptionToChoose();
     }
 
     @And("^he chooses one product$")
