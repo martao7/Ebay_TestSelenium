@@ -23,14 +23,11 @@ public class EbayStepdefs {
     }
 
 
-    @When("^he search a product$")
-    public void heSearchAProduct() {
+    @When("^he gives a name of product$")
+    public void heGivesANameOfProduct() {
 
         SearchProductPage searchProductPage = new SearchProductPage(driver);
         searchProductPage.setSearchWindow("delonghi espresso machine");
-
-
-        //driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
     }
 
     @And("^he chooses an option \"([^\"]*)\", \"([^\"]*)\"$")
@@ -40,11 +37,7 @@ public class EbayStepdefs {
         chooseOptionsPage.setOptionToChoose();
     }
 
-    @And("^he chooses one product$")
-    public void heChoosesOneProduct() {
-    }
-
-    @Then("^this product is added to his order$")
-    public void thisProductIsAddedToHisOrder() {
+   @Then("^user sees all the products in this category$")
+    public void userSeesAllTheProductsInThisCategory() {
     }
 }
