@@ -1,20 +1,13 @@
 package ebay;
 
-import cucumber.api.CucumberOptions;
-import cucumber.api.junit.Cucumber;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.concurrent.TimeUnit;
 
-
-@RunWith(Cucumber.class)
-@CucumberOptions (features = "src/Cucumber/Features/",
-        plugin = {"pretty","html:out"})
 
 public class EbayTest {
     private static WebDriver driver;
