@@ -9,7 +9,8 @@ public class EbayPage2 {
 
     public WebDriver driver;
 
-    public EbayPage2(WebDriver driver) {
+    public EbayPage2(WebDriver driver) 
+    {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
@@ -22,20 +23,17 @@ public class EbayPage2 {
     private WebElement searchWindow;
 
 
-
     public void clickAcceptButton()
     {
         acceptButton.isDisplayed();
         acceptButton.click();
     }
 
-
-    public void setSearchWindow() {
-
+    public void setSearchWindow() 
+    {
         searchWindow.click();
         searchWindow.clear();
         searchWindow.sendKeys("adidas women");
         searchWindow.submit();
     }
-
 }
