@@ -20,7 +20,7 @@ public class SearchProductPage {
     private WebElement acceptButton;
 
 
-    public void setSearchWindow(String sendKeys) {
+    public void SetSearchWindow(String sendKeys) {
         acceptButton.click();
 
         searchWindow.click();
