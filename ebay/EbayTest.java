@@ -15,34 +15,31 @@ public class EbayTest {
     @Before
     public void setUp() {
         System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
-        ChromeDriver driver = new ChromeDriver();
+        driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://www.ebay.com/");
 
         //czekaj zanim rzucisz wyjatkiem (bo nie mozesz znalezc elementu, bo element zniknal)
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
 
 
     @Test
     public void Test() {
+        
         SearchProductPage searchProductPage = new SearchProductPage(driver);
-        searchProductPage.setSearchWindow("delonghi espresso machine");
+        searchProductPage.SetSearchWindow("delonghi espresso machine");
 
         //czekaj zanim rzucisz wyjatkiem
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
             
         ChooseOptionsPage chooseOptionsPage = new ChooseOptionsPage(driver);
-        chooseOptionsPage.setOptionToChoose();
+        chooseOptionsPage.SetOptionToChoose();
 
-
-        //driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-
-        //sprawdzenie poprawnosci adresu
-        //Assert.assertEquals(expectedText, actualText);
     }
     @After
     public void tearDown() {
+        driver.quit();
 
     }
 }
