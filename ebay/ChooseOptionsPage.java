@@ -22,7 +22,7 @@ public class ChooseOptionsPage {
     private WebElement conditionNewCheck;
 
 
-    public void setOptionToChoose() {
+    public void SetOptionToChoose() {
         buyItNowOption.click();
 
         if (!conditionNewCheck.isSelected())
