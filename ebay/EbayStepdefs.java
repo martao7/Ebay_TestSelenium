@@ -15,7 +15,7 @@ public class EbayStepdefs {
     @Given("^an open browser ebay\\.com$")
     public void anOpenBrowserEbayCom() {
         System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
-        ChromeDriver driver = new ChromeDriver();
+        driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://www.ebay.com/");
         
@@ -27,14 +27,14 @@ public class EbayStepdefs {
     public void heGivesANameOfProduct() {
 
         SearchProductPage searchProductPage = new SearchProductPage(driver);
-        searchProductPage.setSearchWindow("delonghi espresso machine");
+        searchProductPage.SetSearchWindow("delonghi espresso machine");
     }
 
     @And("^he chooses an option \"([^\"]*)\", \"([^\"]*)\"$")
     public void heChoosesAnOptionAnd(String arg0, String arg1)  {
         
         ChooseOptionsPage chooseOptionsPage = new ChooseOptionsPage(driver);
-        chooseOptionsPage.setOptionToChoose();
+        chooseOptionsPage.SetOptionToChoose();
     }
 
    @Then("^user sees all the products in this category$")
